@@ -1,6 +1,6 @@
 console.log('js funge')
 let currentUser = ''
-const containerDomElement= document.querySelector('.container')
+const containerDomElement= document.querySelector('.row')
 console.log(containerDomElement)
 const user = [ 
     {name:'Wayne Barnette', role: 'Founder & CEO', image: 'wayne-barnett-founder-ceo.jpg'},
@@ -14,7 +14,8 @@ const user = [
 
 for(i = 0; i < user.length; i++){
     currentUser = user[i]
-    containerDomElement.innerHTML += `<div>${currentUser.name}${currentUser.role}${currentUser.image}</div>`
+    containerDomElement.innerHTML += `
+    <div class="card col-4">${currentUser.name}${currentUser.role} <img class="card-img-top" src="/imgs/${currentUser.image}" alt=""></img></div>`
    
 }
 
