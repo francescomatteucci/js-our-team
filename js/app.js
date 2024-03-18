@@ -1,5 +1,7 @@
 console.log('js funge')
 let currentUser = ''
+const containerDomElement= document.querySelector('.container')
+console.log(containerDomElement)
 const user = [ 
     {name:'Wayne Barnette', role: 'Founder & CEO', image: 'wayne-barnett-founder-ceo.jpg'},
     {name: 'Angela Caroll', role: 'Chief Editor', image: 'angela-caroll-chief-editor.jpg'},
@@ -12,9 +14,10 @@ const user = [
 
 for(i = 0; i < user.length; i++){
     currentUser = user[i]
-    console.log(currentUser.name, currentUser.role, currentUser.image)
+    containerDomElement.innerHTML += `<div>${currentUser.name}${currentUser.role}${currentUser.image}</div>`
    
 }
+
 
 
 
